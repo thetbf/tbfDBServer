@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="RoutineParameter">
+	<section name="USER_PAYMENT">
+		<section name="USER_PAYMENT_CHAR_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_UID">
+				<item value="CHAR"/>
+				<item value="efa7b55c-3bd8-425d-ae3e-dbbd9829fbc6"/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="USER_PAYMENT_CHAR_DECIMAL_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_UID">
+				<item value="CHAR"/>
+				<item value="09f721e6-26de-4d79-b008-272fc1278cd0"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_PMT">
+				<item value="DECIMAL"/>
+				<item value="987.65"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="ATTENDENCE">
+		<section name="ATTENDENCE_CHAR_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_UID">
+				<item value="CHAR"/>
+				<item value="8f02c741-0c80-4164-9d46-d8296074c3de"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="PROCEDURE2">
+		<section name="PROCEDURE2">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+		</section>
+		<section name="PROCEDURE2_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_CUST_FIRSTNAME">
+				<item value="CHAR"/>
+				<item value="ssssssssssss"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="AUTHENTICATESIGNUP">
+		<section name="AUTHENTICATESIGNUP_VARCHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="VARNAME">
+				<item value="VARCHAR"/>
+				<item value="crazyguy891@gmail.com"/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="AUTHENTICATESIGNUP_VARCHAR_VARCHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="VARNAME2">
+				<item value="VARCHAR"/>
+				<item value="8607017143"/>
+				<item value="false"/>
+			</list>
+			<list key="VARNAME1">
+				<item value="VARCHAR"/>
+				<item value="crazyguy4891@gmail.com"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="PROCEDURE5">
+		<section name="PROCEDURE5_VARCHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="VARNAME">
+				<item value="VARCHAR"/>
+				<item value=""/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="PROCEDURE5_CHAR_CHAR_CHAR_CHAR_CHAR_CHAR_CHAR_INTEGER_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_UID">
+				<item value="CHAR"/>
+				<item value="abcdefghijklmnopqrstuvwxyzabcdefghij"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_LNAME">
+				<item value="CHAR"/>
+				<item value="Saini"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_EMAIL">
+				<item value="CHAR"/>
+				<item value="himmat@me.com"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_MOBILE">
+				<item value="CHAR"/>
+				<item value="1010202031"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_ADDR_LN1">
+				<item value="CHAR"/>
+				<item value="Silani Gate, JJR"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_PASSWD">
+				<item value="CHAR"/>
+				<item value="asdf"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_FNAME">
+				<item value="CHAR"/>
+				<item value="Himmat"/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="PROCEDURE5_CHAR_CHAR_CHAR_CHAR_CHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_USER_LNAME">
+				<item value="CHAR"/>
+				<item value="Esheee1"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_EMAIL">
+				<item value="CHAR"/>
+				<item value="hgh@ghgc.COM"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_MOBILE">
+				<item value="CHAR"/>
+				<item value="1234123432"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_PASSWD">
+				<item value="CHAR"/>
+				<item value="abc123"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_FNAME">
+				<item value="CHAR"/>
+				<item value="Amree1"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="PAYMENT">
+		<section name="PAYMENT_CHAR_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_UID">
+				<item value="CHAR"/>
+				<item value="efa7b55c-3bd8-425d-ae3e-dbbd9829fbc6"/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="PAYMENT_CHAR_DECIMAL_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_UID">
+				<item value="CHAR"/>
+				<item value="efa7b55c-3bd8-425d-ae3e-dbbd9829fbc6"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_PMT">
+				<item value="DECIMAL"/>
+				<item value="300.0"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="PROCEDURE4">
+		<section name="PROCEDURE4_VARCHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="VARNAME">
+				<item value="VARCHAR"/>
+				<item value="AMIT"/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="PROCEDURE4_CHAR_CHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="FIRSTNAME">
+				<item value="CHAR"/>
+				<item value="Deepak"/>
+				<item value="false"/>
+			</list>
+			<list key="LASTNAME">
+				<item value="CHAR"/>
+				<item value="Dalal"/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="PROCEDURE4_CHAR_CHAR_CHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="FIRSTNAME">
+				<item value="CHAR"/>
+				<item value="RAJAN"/>
+				<item value="false"/>
+			</list>
+			<list key="ADDRESS">
+				<item value="CHAR"/>
+				<item value="CHHAWANI"/>
+				<item value="false"/>
+			</list>
+			<list key="LASTNAME">
+				<item value="CHAR"/>
+				<item value="SAINI"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="SIGNUP">
+		<section name="SIGNUP_CHAR_CHAR_CHAR_CHAR_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_USER_LNAME">
+				<item value="CHAR"/>
+				<item value="Kadian"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_EMAIL">
+				<item value="CHAR"/>
+				<item value="amresh.kadian@gmail.com"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_MOBILE">
+				<item value="CHAR"/>
+				<item value="8607017143"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_PASSWD">
+				<item value="CHAR"/>
+				<item value="00cs@109"/>
+				<item value="false"/>
+			</list>
+			<list key="IN_USER_FNAME">
+				<item value="CHAR"/>
+				<item value="Amresh"/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="PROCEDURE3">
+		<section name="PROCEDURE3_CHAR_CHAR_CHAR_INTEGER_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="IN_CUST_FIRSTNAME">
+				<item value="CHAR"/>
+				<item value=""/>
+				<item value="false"/>
+			</list>
+			<list key="IN_CUST_LASTNAME">
+				<item value="CHAR"/>
+				<item value=""/>
+				<item value="false"/>
+			</list>
+			<list key="IN_CUST_ADDRESS">
+				<item value="CHAR"/>
+				<item value=""/>
+				<item value="false"/>
+			</list>
+		</section>
+		<section name="PROCEDURE3_VARCHAR_INTEGER">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+			<list key="VARNAME">
+				<item value="VARCHAR"/>
+				<item value=""/>
+				<item value="false"/>
+			</list>
+		</section>
+	</section>
+	<section name="REPORT01">
+		<section name="REPORT01">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+		</section>
+	</section>
+	<section name="REPORT03">
+		<section name="REPORT03">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+		</section>
+	</section>
+	<section name="REPORT02">
+		<section name="REPORT02_CHAR_CHAR">
+			<item value="false" key="RunOptions.RunOptions.CollectActuals"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.BeforeRunScript"/>
+			<item value="true" key="RunOptions.RunOptions.CommitChanges"/>
+			<item value="false" key="RunOptions.RunOptions.GatherTraceInformation"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.BeforeRunStmtTerminator"/>
+			<item value=";" key="RunOptions.RunRoutineConfiguration.AfterRunStmtTerminator"/>
+			<item value="&lt;![CDATA[]]&gt;" key="RunOptions.RunRoutineConfiguration.AfterRunScript"/>
+			<item value="false" key="RunOptions.RunOptions.GatherPerformanceInformation"/>
+		</section>
+	</section>
+</section>
