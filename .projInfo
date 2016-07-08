@@ -1,0 +1,7 @@
+#Thu May 26 14:50:38 IST 2016
+generateSchema=false
+ConnectionName=SAMPLE
+useridCurrentSchema=false
+currentPath=SYSIBM,SYSFUN,SYSPROC,SYSIBMADM,AKADIAN
+currentSchema=AKADIAN
+ProjectAnnotation=SAMPLE\:jdbc\:db2\://localhost\:50000/SAMPLE\:retrieveMessagesFromServerOnGetMessage\=true;

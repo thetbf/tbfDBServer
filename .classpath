@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PROCEDURE1"/>
+	<classpathentry exported="true" kind="lib" path="C:/Program Files/IBM/SQLLIB/java/sqlj.zip"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PROCEDURE1_1/ACMESNS"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PROCEDURE2"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PROCEDURE3"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PROCEDURE4"/>
+	<classpathentry kind="src" path="RoutineJavaSource/SIGNUP"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PROCEDURE5"/>
+	<classpathentry kind="src" path="RoutineJavaSource/AUTHENTICATESIGNUP"/>
+	<classpathentry kind="src" path="RoutineJavaSource/REPORT01"/>
+	<classpathentry kind="src" path="RoutineJavaSource/REPORT02"/>
+	<classpathentry kind="src" path="RoutineJavaSource/REPORT03"/>
+	<classpathentry kind="src" path="RoutineJavaSource/ACTIVATE"/>
+	<classpathentry kind="src" path="RoutineJavaSource/USER_PAYMENT"/>
+	<classpathentry kind="src" path="RoutineJavaSource/PAYMENT"/>
+	<classpathentry kind="src" path="RoutineJavaSource/Z02"/>
+	<classpathentry kind="src" path="RoutineJavaSource/Z03"/>
+	<classpathentry kind="src" path="RoutineJavaSource/ATTENDENCE"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>

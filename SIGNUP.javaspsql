@@ -1,0 +1,11 @@
+CREATE PROCEDURE SIGNUP ( IN IN_USER_EMAIL CHAR(50),
+                          IN IN_USER_MOBILE CHAR(10),
+                          IN IN_USER_FNAME CHAR(20),
+                          IN IN_USER_LNAME CHAR(20),
+                          IN IN_USER_PASSWD CHAR(16), OUT VARCOUNT INTEGER)
+    NOT DETERMINISTIC
+    LANGUAGE Java
+    EXTERNAL NAME 'AKADIAN.SIGNUP:com.mytbfgym.www.SIGNUP.x_SIGNUP'
+    FENCED
+    THREADSAFE
+    PARAMETER STYLE JAVA

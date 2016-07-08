@@ -1,0 +1,16 @@
+CREATE PROCEDURE PROCEDURE5 ( 
+                          IN IN_UID CHAR(36),
+						  IN IN_USER_EMAIL CHAR(50),
+                          IN IN_USER_MOBILE CHAR(10),
+                          IN IN_USER_FNAME CHAR(20),
+                          IN IN_USER_LNAME CHAR(20),
+                          IN IN_USER_PASSWD CHAR(16), 
+                          IN IN_USER_ADDR_LN1 CHAR(50),
+                          OUT 	MARK CHAR(40),
+                          OUT 	MARK_ERROR_TEXT 	CHAR(200))
+    NOT DETERMINISTIC
+    LANGUAGE Java
+    EXTERNAL NAME 'DS_20160527114810:com.Public.Public.PROCEDURE5.x_PROCEDURE5'
+    FENCED
+    THREADSAFE
+    PARAMETER STYLE JAVA

@@ -1,0 +1,10 @@
+CREATE PROCEDURE USER_PAYMENT ( IN IN_UID CHAR(36),
+                                IN IN_USER_PMT DECIMAL(10,2),
+                                OUT mark CHAR(40),
+                                OUT mark_error_text CHAR(200) )
+--    SPECIFIC NAME SQL160622160526460
+	NOT DETERMINISTIC
+	LANGUAGE JAVA
+	EXTERNAL NAME 'AKADIAN.DS_20160622154750:com.Public.Public.USER_PAYMENT.x_USER_PAYMENT'
+	FENCED
+	THREADSAFE

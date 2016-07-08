@@ -1,0 +1,9 @@
+CREATE PROCEDURE ATTENDENCE ( IN IN_UID CHAR(36),
+                              OUT mark CHAR(40),
+                              OUT mark_error_text CHAR(200) )
+    NOT DETERMINISTIC
+    LANGUAGE Java
+    EXTERNAL NAME 'DS_20160630011713:com.Public.Public.ATTENDENCE.x_ATTENDENCE'
+    FENCED
+    THREADSAFE
+    PARAMETER STYLE JAVA

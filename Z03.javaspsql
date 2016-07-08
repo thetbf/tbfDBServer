@@ -1,0 +1,10 @@
+CREATE PROCEDURE Z03 ( IN IN_UID CHAR(36),
+                                IN IN_USER_PMT DECIMAL(10,2),
+                                OUT mark CHAR(40),
+                                OUT mark_error_text CHAR(200) )
+    NOT DETERMINISTIC
+    LANGUAGE Java
+    EXTERNAL NAME 'DS_20160622162026:com.Public.Public.PAYMENT.x_PAYMENT'
+    FENCED
+    THREADSAFE
+    PARAMETER STYLE JAVA
