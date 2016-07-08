@@ -1,0 +1,71 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator ATTENDENCE_Cursor1 (java.lang.String );
+
+public class ATTENDENCE {
+    public static void x_ATTENDENCE(
+    		String IN_UID,
+            String[] mark, 
+            String[] mark_error_text) throws SQLException, Exception {
+        ATTENDENCE_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+       String spUid = IN_UID;
+       mark_error_text[0] = "OK";
+       String spSuccessInd = "";
+        mark[0] = "ATTENDENCE: Get context";
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+         
+        mark[0] = "USER_ATTENDENCE: " + "//" + 
+//        spPmtAmt;
+        spUid; 
+            #sql  [ctx] 
+        { INSERT INTO "AKADIAN".TBF_USER_ATTENDENCE  
+            (    USER_ID
+               , USER_PRESENCE_DT )
+          VALUES (
+            (SELECT USER_ID
+                   FROM AKADIAN.TBF_USER
+                  WHERE SUBSTR(USER_FILLER2,1,36) = :spUid)
+               , CURRENT DATE)
+        }; // #sql 
+       // mark[0] = "Add_customer: COMMIT";
+       // #sql [ctx] {COMMIT}; 
+        }
+        catch (SQLException e) {
+         mark_error_text[0] = "USER_ATTENDENCE: SQLException raised: "
+         + "SQLState = "
+         + e.getSQLState() + " SQLCODE = " + e.getErrorCode()
+         + " :" + e.getMessage();
+        System.out.println("USER_ATTENDENCE: caught sqlexception");
+        System.out.println("USER_ATTENDENCE: "+ mark_error_text[0]);
+        e.printStackTrace();
+          //throw(e);
+        }
+    catch (Exception e)
+    {
+        mark_error_text[0] = "USER_ATTENDENCE: major exception caught: "
+        + e.getMessage();
+        System.out.println("USER_ATTENDENCE: caught java exception");
+        System.out.println("USER_ATTENDENCE: "+ mark_error_text[0]);
+        e.printStackTrace();
+    }  
+        finally {
+            // Close resources
+            try {
+                if (cursor1 != null)
+                    cursor1.close();
+                if (ctx != null)
+                    ctx.close();
+            } catch (SQLException e2) { /* Ignore */
+            }
+        }
+    }
+}

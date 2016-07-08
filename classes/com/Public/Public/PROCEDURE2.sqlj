@@ -1,0 +1,39 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+//#sql iterator PROCEDURE2_Cursor1 (java.lang.String );
+
+public class PROCEDURE2 {
+    public static void x_PROCEDURE2(String in_cust_firstname) throws SQLException, Exception {
+        // #######################################################################
+	    // # The example SQL statement
+        // # returns all tables created by AKADIAN
+        // #######################################################################
+        //PROCEDURE2_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+        
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+            
+            #sql {
+                 INSERT INTO
+                         "ACMES".CUSTOMER
+                         (
+                            CUST_FIRSTNAME
+                         )
+                          VALUES
+                         (
+                        :in_cust_firstname
+                         ) };
+        }
+        catch (SQLException e) {
+            throw(e);
+        }
+    }
+}

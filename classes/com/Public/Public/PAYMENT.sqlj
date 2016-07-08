@@ -1,0 +1,95 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator PAYMENT_Cursor1 (java.lang.String );
+
+public class PAYMENT {
+    public static void x_PAYMENT(
+    		String IN_UID, 
+    		Float IN_USER_PMT,
+            String[] mark, 
+            String[] mark_error_text) throws SQLException, Exception {
+        PAYMENT_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+       int spUserId = 0;
+       int spSeq = 0;
+       String spUid = IN_UID;
+       mark_error_text[0] = "OK";
+       Float spPmtAmt = IN_USER_PMT; 
+       String spSuccessInd = "";
+        mark[0] = "PAYMENT: Get context";
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+            #sql [ctx] cursor1 = {  
+                 SELECT USER_ID
+                   FROM AKADIAN.TBF_USER
+            	WHERE SUBSTR(USER_FILLER2,1,36) = :spUid};
+            
+            ResultSet rs = cursor1.getResultSet();
+            if (rs.next()){
+                spUserId = rs.getInt(1);
+                }
+         
+           mark[0] = "PAYMENT: SELECT MAX SEQUENCE " + spUserId;       
+              #sql  [ctx] cursor1 = {  
+                 SELECT MAX(USER_ID_SEQ)
+                   FROM AKADIAN.TBF_USER_PAYMENT
+            	WHERE USER_ID = :spUserId};
+            
+            ResultSet rs2 = cursor1.getResultSet();
+            if (rs.next()){
+                spSeq = rs.getInt(1);
+                } // #sql
+            if (spSeq == 0) {
+            	spSeq++;
+            }
+        mark[0] = "PAYMENT: insert into TBF_USER_PAYMENT" + spUserId; 
+            #sql  [ctx] 
+        { INSERT INTO "AKADIAN".TBF_USER_PAYMENT  
+            (    USER_ID
+               , USER_ID_SEQ
+               , USER_PAYMENT_AMT 
+               , USER_PAYMENT_DT
+               , USER_PAYMENT_TM )
+          VALUES 
+            (:spUserId, :spSeq, :spPmtAmt, CURRENT DATE, CURRENT TIME )
+        }; // #sql
+       // mark[0] = "Add_customer: COMMIT";
+       // #sql [ctx] {COMMIT}; 
+        }
+        catch (SQLException e) {
+         mark_error_text[0] = "PAYMENT: SQLException raised: "
+         + "SQLState = "
+         + e.getSQLState() + " SQLCODE = " + e.getErrorCode()
+         + " :" + e.getMessage();
+        System.out.println("PAYMENT: caught sqlexception");
+        System.out.println("PAYMENT: "+ mark_error_text[0]);
+        e.printStackTrace();
+          //throw(e);
+        }
+    catch (Exception e)
+    {
+        mark_error_text[0] = "PROCEDURE5: major exception caught: "
+        + e.getMessage();
+        System.out.println("PROCEDURE5: caught java exception");
+        System.out.println("PROCEDURE5: "+ mark_error_text[0]);
+        e.printStackTrace();
+    }  
+        finally {
+            // Close resources
+            try {
+                if (cursor1 != null)
+                    cursor1.close();
+                if (ctx != null)
+                    ctx.close();
+            } catch (SQLException e2) { /* Ignore */
+            }
+        }
+    }
+}

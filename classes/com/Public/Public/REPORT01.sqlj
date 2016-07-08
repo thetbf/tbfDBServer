@@ -1,0 +1,37 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator REPORT01_Cursor1 (java.lang.String );
+
+public class REPORT01{
+    public static void x_REPORT01(ResultSet[] rs)  throws SQLException, Exception {
+        REPORT01_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+
+            // #######################################################################
+	        // # Replace the SQL statement with your statement.
+	        // #  Note: Be sure enclose the SQL statement in braces.
+	        // #
+	        // # The example SQL statement SELECT NAME FROM SYSIBM.SYSTABLES
+	        // # returns all names from SYSIBM.SYSTABLES.
+	        // ######################################################################
+            #sql [ctx] cursor1 = { 
+            		SELECT USER_FIRST_NAME
+            			 , USER_LAST_NAME 
+            		  FROM AKADIAN.TBF_USER };
+            
+            rs[0] = cursor1.getResultSet();
+        }
+        catch (SQLException e) {
+          throw(e);
+        }
+    }
+}

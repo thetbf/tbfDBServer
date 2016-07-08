@@ -1,0 +1,107 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator USER_PAYMENT_Cursor1 (java.lang.String );
+#sql iterator USER_PAYMENT_Cursor2 (java.lang.String );
+
+public class USER_PAYMENT {
+    public static void x_USER_PAYMENT(
+    		String IN_UID, 
+    		java.math.BigDecimal IN_USER_PMT,
+//    		String IN_USER_PMT,
+            String[] mark, 
+            String[] mark_error_text) throws SQLException, Exception {
+        USER_PAYMENT_Cursor1 cursor1 = null;
+        USER_PAYMENT_Cursor2 cursor2 = null;
+        SPContext ctx = null;
+       int spUserId = 0;
+       int spSeq = 0;
+       String spUid = IN_UID;
+       mark_error_text[0] = "OK";
+       java.math.BigDecimal spPmtAmt = IN_USER_PMT; 
+       String spStrAmt = "" + spPmtAmt + "";
+//       String spPmtAmt = IN_USER_PMT; 
+       System.out.println("IN_USER_PMT: "+IN_USER_PMT+"Amount: "+spPmtAmt);
+       String spSuccessInd = "";
+        mark[0] = "USER_PAYMENT: Get context";
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+            #sql [ctx] cursor1 = {  
+                 SELECT USER_ID
+                   FROM AKADIAN.TBF_USER
+            	WHERE SUBSTR(USER_FILLER2,1,36) = :spUid};
+            
+            ResultSet rs = cursor1.getResultSet();
+            if (rs.next()){
+                spUserId = rs.getInt(1);
+                }
+         
+           mark[0] = "USER_PAYMENT: SELECT MAX SEQUENCE " + spUserId;       
+              #sql  [ctx] cursor2 = {  
+                 SELECT MAX(USER_ID_SEQ)
+                   FROM AKADIAN.TBF_USER_PAYMENT
+            	WHERE USER_ID = :spUserId};
+            
+            ResultSet rs2 = cursor2.getResultSet();
+            if (rs2.next()){
+                spSeq = rs2.getInt(1);
+            	spSeq++;
+                } // #sql
+//                System.out.println("USER: " + spUserId + " SEQ# " + spSeq);
+        mark[0] = "USER_PAYMENT: " + IN_USER_PMT + "//" + 
+//        spPmtAmt;
+        spUserId; 
+            #sql  [ctx] 
+        { INSERT INTO "AKADIAN".TBF_USER_PAYMENT  
+            (    USER_ID
+               , USER_ID_SEQ
+               , USER_PAYMENT_AMT 
+               , USER_PAYMENT_DT
+               , USER_PAYMENT_TM )
+          VALUES 
+            (:spUserId, :spSeq, DECIMAL(:spStrAmt,10,2,'.'), CURRENT DATE, CURRENT TIME )
+        }; // #sql 
+            #sql  [ctx] 
+        { UPDATE "AKADIAN".TBF_USER SET  
+            USER_NEXT_PAYMENT_DT = CURRENT DATE + 1 MONTH
+            	WHERE USER_ID = :spUserId
+         }; // #sql
+       // mark[0] = "Add_customer: COMMIT";
+       // #sql [ctx] {COMMIT}; 
+        }
+        catch (SQLException e) {
+         mark_error_text[0] = "USER_PAYMENT: SQLException raised: "
+         + "SQLState = "
+         + e.getSQLState() + " SQLCODE = " + e.getErrorCode()
+         + " :" + e.getMessage();
+        System.out.println("USER_PAYMENT: caught sqlexception");
+        System.out.println("USER_PAYMENT: "+ mark_error_text[0]);
+        e.printStackTrace();
+          //throw(e);
+        }
+    catch (Exception e)
+    {
+        mark_error_text[0] = "USER_PAYMENT: major exception caught: "
+        + e.getMessage();
+        System.out.println("USER_PAYMENT: caught java exception");
+        System.out.println("USER_PAYMENT: "+ mark_error_text[0]);
+        e.printStackTrace();
+    }  
+        finally {
+            // Close resources
+            try {
+                if (cursor1 != null)
+                    cursor1.close();
+                if (ctx != null)
+                    ctx.close();
+            } catch (SQLException e2) { /* Ignore */
+            }
+        }
+    }
+}

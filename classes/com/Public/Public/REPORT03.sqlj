@@ -1,0 +1,51 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator REPORT03_Cursor1 (java.lang.String , java.lang.String , java.lang.String , java.lang.String , java.lang.String);
+
+public class REPORT03 {
+    public static void x_REPORT03(ResultSet[] rs) throws SQLException, Exception {
+        // #######################################################################
+	    // # The example SQL statement
+        // # returns all tables created by AKADIAN
+        // #######################################################################
+        REPORT03_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+        
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+
+            #sql [ctx] cursor1 = {   
+            		SELECT A.USER_FIRST_NAME
+            			, A.USER_LAST_NAME
+            			, A.USER_FILLER2
+            			,
+            			CASE
+            				WHEN B.USER_PRESENCE_DT IS NULL THEN 'N'
+            				ELSE 'Y'
+            			END AS USER_ATTENDENCE
+            			,CASE
+            				WHEN A.USER_NEXT_PAYMENT_DT IS NULL THEN -1
+            				WHEN A.USER_NEXT_PAYMENT_DT > CURRENT DATE THEN 0 
+            				WHEN A.USER_NEXT_PAYMENT_DT <= CURRENT DATE THEN 
+            				DAYS (CURRENT DATE) - DAYS (A.USER_NEXT_PAYMENT_DT) 
+            			END AS NBR_DAYS_PAYMENT
+            			FROM AKADIAN.TBF_USER A
+            			LEFT OUTER JOIN AKADIAN.TBF_USER_ATTENDENCE B
+            				ON A.USER_ID = B.USER_ID 
+            			  AND B.USER_PRESENCE_DT = CURRENT DATE
+            			WHERE A.USER_FILLER2 IS NOT NULL };
+            
+            rs[0] = cursor1.getResultSet();
+        }
+        catch (SQLException e) {
+            throw(e);
+        }
+    }
+}

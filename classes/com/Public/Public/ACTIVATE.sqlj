@@ -1,0 +1,61 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator ACTIVATE_Cursor1 (java.lang.String );
+
+public class ACTIVATE {
+    public static void x_ACTIVATE(String IN_USER_ID) throws SQLException, Exception {
+        ACTIVATE_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+//       int spUserId = 0;
+       String spUserId = IN_USER_ID;
+       String spSuccessInd = "";
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+//           mark[0] = "ACTIVATE: update TBF_USER: " + spUserId;       
+              #sql  [ctx] 
+        { UPDATE AKADIAN.TBF_USER SET
+            USER_ACTV_CD = 'A', 
+            USER_ACTV_DT = CURRENT DATE, 
+            USER_INACTV_DT = '12/31/9999', 
+            USER_NEXT_PAYMENT_DT = CURRENT DATE + 1 MONTH
+            WHERE SUBSTR(USER_FILLER1,1,36) = :spUserId
+        }; // #sql
+       // #sql [ctx] {COMMIT}; 
+        }
+//        catch (SQLException e) {
+////         mark_error_text[0] = "PROCEDURE5: SQLException raised: "
+////         + "SQLState = "
+//         + e.getSQLState() + " SQLCODE = " + e.getErrorCode()
+//         + " :" + e.getMessage();
+//        System.out.println("ACTIVATE: caught sqlexception");
+////        System.out.println("ACTIVATE: "+ mark_error_text[0]);
+//        e.printStackTrace();
+//          throw(e);
+//        }
+    catch (Exception e)
+    {
+//        mark_error_text[0] = "ACTIVATE: major exception caught: "
+//        + e.getMessage();
+        System.out.println("ACTIVATE: caught java exception");
+//        System.out.println("ACTIVATE: "+ mark_error_text[0]);
+        e.printStackTrace();
+    }  
+        finally {
+            // Close resources
+            try {
+                if (cursor1 != null)
+                    cursor1.close();
+                if (ctx != null)
+                    ctx.close();
+            } catch (SQLException e2) { /* Ignore */
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+package com.Public.Public;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+#sql context SPContext;
+#sql iterator REPORT02_Cursor1 ( java.lang.String );
+
+public class REPORT02{
+    public static void x_REPORT02 (
+    		String OUT_FIRST_NAME,
+    		String OUT_LAST_NAME ) throws SQLException, Exception {
+        REPORT02_Cursor1 cursor1 = null;
+        SPContext ctx = null;
+        String spFirstName = null;
+        String spLastName = null;
+        // #######################################################################
+	    // # The example SQL statement
+        // # returns the count of all tables created by AKADIAN and like VARNAME
+        // #######################################################################
+        try {
+            ctx = new SPContext("jdbc:default:connection", false);
+
+            #sql [ctx] cursor1 = {  
+            		SELECT USER_FIRST_NAME, USER_LAST_NAME
+            		  FROM AKADIAN.TBF_USER  
+            		 FETCH FIRST 1 ROW ONLY };
+            
+            ResultSet rs = cursor1.getResultSet();
+            if (rs.next()) {
+                spFirstName = rs.getString(1);
+                spLastName = rs.getString(2);
+                }
+        }
+        catch (SQLException e) {
+          throw(e);
+        }
+        finally {
+        	//move output values
+        	OUT_FIRST_NAME = spFirstName;
+        	OUT_LAST_NAME = spLastName;
+            // Close resources
+            try {
+                if (cursor1 != null)
+                    cursor1.close();
+                if (ctx != null)
+                    ctx.close();
+            } catch (SQLException e2) { /* Ignore */
+            }
+        }
+    }
+}
